@@ -1,9 +1,10 @@
 # app.py
+import configparser
 
 from flask import Flask, send_from_directory
 from dotenv import load_dotenv
-from .extensions import db, migrate, cors  
-from .config import Config 
+from extensions import db, migrate, cors  
+from config import Config 
 
 # Load environment variables from .env file
 load_dotenv()
