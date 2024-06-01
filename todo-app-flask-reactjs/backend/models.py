@@ -1,4 +1,11 @@
-from .extensions import db
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from flask_cors import CORS
+
+
+db = SQLAlchemy()
+migrate = Migrate()
+cors = CORS()
 
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)

@@ -1,6 +1,13 @@
 from flask import Blueprint, request, jsonify, abort
 from .models import Todo
-from .extensions import db
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from flask_cors import CORS
+
+
+db = SQLAlchemy()
+migrate = Migrate()
+cors = CORS()
 
 bp = Blueprint('routes', __name__)
 
