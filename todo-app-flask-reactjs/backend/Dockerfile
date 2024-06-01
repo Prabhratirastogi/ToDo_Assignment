@@ -1,13 +1,12 @@
 # Use the official Python image as base image
 FROM python:3.9.6
 
-# Set the PYTHONPATH environment variable
+# Set environment variables
 ENV PYTHONPATH "${PYTHONPATH}:/app"
-
+ENV FLASK_APP "app.py"
 
 # Set the working directory in the container
 WORKDIR /app
-
 
 # Copy the requirements file into the container at /app
 COPY requirements.txt /app/
@@ -22,4 +21,4 @@ COPY . /app/
 EXPOSE 5000
 
 # Define the command to run the application
-CMD ["python3", "app.py"]
+CMD ["flask", "run", "--host=0.0.0.0"]
