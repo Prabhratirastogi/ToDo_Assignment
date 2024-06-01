@@ -172,7 +172,7 @@ If you make a `GET` request for all tasks you will see something like this:
 4. Access your application at http://localhost:3000 (frontend) and http://localhost:5000 (backend).
 
 
-# Commands use for docker implementation 
+# Commands use for Docker Implementation 
 
 1. Clone the Project Respository
 
