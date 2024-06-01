@@ -1,0 +1,44 @@
+# Common ignores
+*.log
+*.lock
+*.pyc
+*.pyo
+*.pyd
+./todo-app-flask-reactjs/backend/__pycache__/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.old
+
+# Environment variables
+.env
+.env.*
+
+# Ignore the node_modules directory in the frontend
+/frontend/node_modules
+
+# Ignore build directories
+/frontend/build
+/backend/build
+
+
+# Ignore coverage directories
+/frontend/coverage
+/backend/coverage
+
+# Ignore miscellaneous files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE files
+.idea/
+.vscode/
+
+# Ignore Python virtual environments
+venv/
+*.env
+
+# Include the frontend and backend specific .gitignore files
+frontend/.gitignore
+backend/.gitignore
