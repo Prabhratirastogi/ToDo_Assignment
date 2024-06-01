@@ -2,13 +2,12 @@ version: '3.8'
 
 services:
   backend:
-    build: ./backend
-    ports:
-      - "5000:5000"
-    environment:
-      - DATABASE_URL=mysql://root:ucRKoZpptSQxUitPygEQPibZzIEovJnE@database:3306/todo
-    depends_on:
-      - database
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      args:
+        PYTHONPATH: /app
+
 
   frontend:
     build: ./frontend
