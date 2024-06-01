@@ -1,6 +1,4 @@
-# basedir = os.path.abspath(os.path.dirname(__file__))
-
-import MySQLdb
+# config.py
 import os
 from dotenv import load_dotenv
 
