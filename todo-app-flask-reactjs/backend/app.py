@@ -19,7 +19,8 @@ cors.init_app(app)
 
 # Import routes and register blueprints
 with app.app_context():
-    from . import routes
+    
+    import routes
     app.register_blueprint(routes.bp)
 
 # Serve the index.html file
