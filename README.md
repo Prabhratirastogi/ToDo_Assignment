@@ -131,51 +131,96 @@ If you make a `GET` request for all tasks you will see something like this:
     {
       "description": "Just doing some test to finally complete this project! :)",
       "id_task": 1,
-      "timestamp": "Tue, 20 Dec 2022 02:25:49 GMT",
       "title": "Test1"
     },
     {
       "description": "Just doing some test to finally complete this project! :)",
       "id_task": 2,
-      "timestamp": "Tue, 20 Dec 2022 02:26:02 GMT",
       "title": "Test2"
     },
     {
       "description": "Just doing some test to finally complete this project! :)",
       "id_task": 3,
-      "timestamp": "Tue, 20 Dec 2022 02:26:09 GMT",
       "title": "Test3"
     },
     {
       "description": "Just doing some test to finally complete this project! :)",
       "id_task": 4,
-      "timestamp": "Tue, 20 Dec 2022 02:26:22 GMT",
       "title": "Test4"
     },
     {
       "description": "Just doing some test to finally complete this project! :)",
       "id_task": 6,
-      "timestamp": "Tue, 20 Dec 2022 02:27:23 GMT",
       "title": "Test5"
     },
     {
       "description": "Just doing some test to finally complete this project! :)",
       "id_task": 7,
-      "timestamp": "Tue, 20 Dec 2022 04:37:03 GMT",
       "title": "Test6"
     }
   ],
-  "links": {
-    "next": "/api/tasks?page=2&per_page=6",
-    "prev": null,
-    "self": "/api/tasks?page=1&per_page=6"
-  },
-  "meta": {
-    "page": 1,
-    "per_page": 6,
-    "total_items": 7,
-    "total_pages": 2
-  }
-}
+
+```
+
+<!-- Docker Implimentation and Application deployment -->
+
+# Docker file creation build and start service
+
+1. Create a docker-compose.yml file in your project's root directory.
+2. Define services for your backend, frontend, and database in the docker-compose.yml file.
+3. Build and start services using the docker-compose up command in the same directory as docker-compose.yml.
+4. Access your application at http://localhost:3000 (frontend) and http://localhost:5000 (backend).
+
+
+# Commands use for docker implementation 
+
+1. Clone the Project Respository
+
+```shell
+$. git clone https://github.com/Prabhratirastogi/ToDo_Assignment
+
+```
+
+```shell
+$. docker-compose build
+
+```
+
+2. Build Docker Images:
+
+```shell
+$. docker-compose build
+
+```
+
+3. Run the Application with:
+
+```shell
+$. docker-compose up
+
+```
+
+4. Start Containers
+
+```shell
+$. docker-compose up -d
+
+```
+
+5. Access Application Logs
+
+```shell
+$. docker-compose logs -f
+
+```
+
+# Frontend Backend Url For accessing the Application 
+
+```shell
+$. Frontend : http://localhost:3000  (Local)
+            :http://172.18.0.2:3000  (YourNetwork)
+            
+$. Backend : http://172.18.0.4:5000
+
 ```
 
