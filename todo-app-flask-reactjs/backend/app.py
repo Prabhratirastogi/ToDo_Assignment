@@ -2,7 +2,7 @@
 
 from flask import Flask, send_from_directory
 from dotenv import load_dotenv
-from backend.extensions import db, migrate, cors  
+from extensions.py import db, migrate, cors  
 from backend.config import Config 
 
 # Load environment variables from .env file
