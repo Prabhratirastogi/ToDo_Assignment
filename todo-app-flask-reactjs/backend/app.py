@@ -4,7 +4,8 @@ from flask import Flask, send_from_directory
 from dotenv import load_dotenv
 # from config import Config 
 import os
-
+from .extensions import db, migrate, cors  
+from .config import Config 
 # Load environment variables from .env file
 load_dotenv()
 

@@ -4,6 +4,8 @@ FROM python:3.9.6
 # Set environment variables
 ENV PYTHONPATH "${PYTHONPATH}:/app"
 ENV FLASK_APP "app.py"
+# Set the PYTHONPATH environment variable
+ENV PYTHONPATH /app
 
 # Set the working directory in the container
 WORKDIR /app
@@ -21,4 +23,7 @@ COPY . /app/
 EXPOSE 5000
 
 # Define the command to run the application
-CMD ["flask", "run", "--host=0.0.0.0"]
+# CMD ["flask", "run", "--host=0.0.0.0"]
+
+CMD ["python", "app.py"]
+
